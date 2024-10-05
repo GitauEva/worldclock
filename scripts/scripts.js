@@ -26,6 +26,19 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  //Jamaica
+  let jamaicaElement = document.querySelector("#jamaica");
+  if (jamaicaElement) {
+    let jamaicaDateElement = jamaicaElement.querySelector(".date");
+    let jamaicaTimeElement = jamaicaElement.querySelector(".time");
+    let jamaicaTime = moment().tz("America/Jamaica");
+
+    jamaicaDateElement.innerHTML = jamaicaTime.format("MMMM Do YYYY");
+    jamaicaTimeElement.innerHTML = jamaicaTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 function updateCity(event) {
   let cityTimeZone = event.target.value;
